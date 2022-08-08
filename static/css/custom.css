@@ -1,0 +1,394 @@
+body{
+    background-color: floralwhite;
+}
+body{
+    background-color: antiquewhite;
+}
+
+.reviewback{
+margin-top:30px;
+}
+
+.topic{
+font-size:37px;
+font-weight: 900;
+text-align: center;
+font-family:Eras Bold ITC;
+}
+.imageSlider{
+    height:500px;
+    width: 900px;
+    border-right: 5px solid blue;
+    border-left: 5px solid blue;
+    margin-top: 30px;
+    margin-left: 130px;
+}
+.contentPart{
+height:550px;
+width:100%;
+background-image: url("../images/s.png");
+background-repeat: no-repeat;
+border:2px solid blue;
+background-size: 1500px 550px;
+background-attachment: scroll;
+background-color:aliceblue;
+}
+.footer{
+height:350px;
+width:100%;
+background-color:black;
+border-top: 6px solid blue;
+}
+.college{
+    text-decoration: dashed;
+    color: aliceblue;
+    font-size: 24px;
+    margin-left:248px;
+    padding-bottom:-4px;
+    text-align: center;
+    margin-top:-110px;
+    font-family:Bauhaus 93 ;
+}
+.p{
+    color: aliceblue;
+    text-align: center;
+    margin-left:226px;
+    font-size: medium;
+}
+.signBtn{
+    margin-top: 163px;
+    margin-left: 184px;
+}
+.DisplayName{
+    padding-left:10px;
+    padding-top: 26px;
+}
+.welcome{
+    font-size:18px;
+    font-family:Maler;
+    color:Blue;
+}
+.topic{
+    font-size:35px;
+    font-family:Maler;
+    text-decoration:underline;
+}
+
+.schoolimg{
+    width: 58%;
+    height: 170px;
+    margin-left: 130px;
+    border: 4px solid blue;
+    border-radius: 25px;
+
+}
+.card-title{
+    font-size: 28px;
+    font-weight: 700;
+    padding-top: 12px;
+    font-style: oblique;
+}
+
+/* Review Slider */
+
+.card-content{
+    height:350px;
+    width:250px;
+    margin-top:30px;
+    margin-left:82px;
+    padding-left:0px;
+
+}
+
+.card .card-content .image img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border:3px solid #000;
+}
+
+.card .card-content .image{
+    height: 100px;
+    width:100px;
+    padding-left:20px;
+    border-radius: 50%;
+    padding:0px;
+    background: #7d2ae8;
+}
+
+/*Ratings*/
+.checked {
+     color: orange;
+}
+
+/*hide the radio button*/
+.rate > input{
+    display:none;
+}
+.rate{
+    display: inline-block;
+    border: 0;
+}
+.rate > label{
+    float: right;
+}
+
+.rate > label{
+    float: right;
+}
+
+/*start showing the star*/
+.rate > label:before{
+    display: inline-block;
+    font-size: 1.7 rem;
+    font-family: FontAwesome;
+    content: "\f005";
+    margin: 0;
+    padding: 0.1 rem .2 rem;
+    cursor: pointer;
+}
+
+/* half star */
+.rate .half:before{
+    content: "\f089";
+    position: absolute;
+    padding-right: 0;
+}
+
+/* click and hover */
+input:checked ~ label, label:hover ~ label{
+    color: #ffb503 ;
+}
+/* hoer heightlight */
+input:checked + label:hover, input:checked ~ label:hover, input:checked ~ label:hover ~ label,
+label:hover ~ input:checked ~ label{
+    color: #cc9000;
+}
+
+/*Search Option */
+.boxContainer{
+    margin: auto;
+    margin-left:79%;
+    margin-top:-30px;
+    position:relative;
+    width:300px;
+    height:36px;
+    color:#2980b9;
+    border: 2px solid #2980b9;
+
+    border-radius: 50px;
+}
+.elementsContainer{
+    width:100%;
+    height:100%;
+    vertical-align:middle;
+}
+.search{
+    border:none;
+    height:100%;
+    width:101%;
+    padding: 0px 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-family: "Nunito";
+    color: #424242;
+    font-weight: 500;
+}
+.search:focus{
+    outline:none;
+}
+.searchIcon{
+    font-size:20px;
+    margin-left:-39px;
+    color:#2980b9;
+}
+/*Studentcategory part*/
+.studentcategory{
+    margin-top:39px;
+    padding-left:85px;
+    font-size:30px;
+    margin-left:349px;
+    color:black ;
+}
+.btncategory{
+    margin-top:149px;
+    padding-left:72px;
+}
+/*exam form*/
+.examform{
+    margin-top:30px;
+    opacity:7;
+    border:3px solid black;
+}
+.instruction{
+    margin-top:-59px;
+    margin-left:90px;
+    font-size:10px;
+}
+.note{
+    font-size:20px;
+    padding-left:60px;
+    font-weight:bold;
+    margin-top:100px;
+    border:2px solid red;
+
+}
+.sorrypages{
+    font-size:20px;
+    padding-left:60px;
+    font-weight:bold;
+    margin-top:180px;
+    border:2px solid red;
+}
+.note_check{
+    font-size:20px;
+    padding-left:165px;
+    font-weight:bold;
+    margin-top:160px;
+    border:2px solid red;
+
+}
+.covers{
+    border:3px solid black;
+    background-image: url("../images/school.jpg");
+}
+span{
+    color:red;
+    font-size:30px;
+}
+
+/*ResetPassword*/
+.resetpassword{
+    height:490px;
+    width:100%;
+    background-image: url("../images/forget.jpg");
+    opacity: 0.9;
+}
+.chng_password{
+    border:2px solid black;
+    border-radius:5%;
+}
+.cpassword{
+border:3px solid red;
+padding:20px;
+}
+
+/*logo*/
+.logo{
+    margin-top:25px;
+    margin-left:40px;
+    position:absolute;
+}
+.check{
+    background-image: url("../images/suman.png");
+
+}
+.don{
+    background-image: url("../images/rev.png");
+}
+.cover{
+    border:1px solid black;
+    border-radius:1%;
+    background-color:floralwhite;
+}
+.ladder{
+    background-image: url("../images/ladder.png");
+    height:460px;
+}
+.himal{
+    background-image: url("../images/himal.png");
+}
+
+.blogs{
+    background-image: url("../images/blogs.png");
+}
+.img_log{
+    background-image: url("../images/o.png");
+}
+.about_us{
+    height:710px;
+    width:100%;
+    background-image: url("../images/about.png");
+}
+.contact_us{
+    height:540px;
+    width:100%;
+    background-image: url("../images/contact.png");
+}
+.about_topic{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+.paragraphs{
+    font-size:23px;
+    font-family:Calibri;
+}
+.board{
+    font-size:25px;
+    font-weight:bold;
+}
+.boar{
+    border: 2px solid blue;
+    text-align:center;
+    height:430px;
+}
+.imag img{
+   border: 2px solid red;
+   height:90px;
+   width:90px;
+   border-radius:50%;
+}
+.addr{
+    font-size:25px;
+    font-weight:bold;
+    margin-left:110px;
+    margin-top:9px;
+}
+
+.phon{
+    font-size:25px;
+    font-weight:bold;
+    margin-left:120px;
+    margin-top:9px;
+}
+.messag{
+    font-size:25px;
+    font-weight:bold;
+    margin-left:110px;
+    margin-top:9px;
+}
+.phn{
+    font-size:20px;
+    margin:-10px;
+    margin-left:-50px;
+    font-family:Calibri;
+    margin-top:9px;
+    text-align:center;
+}
+.codopark{
+    font-size:25px;
+    color:white;
+}
+.useful{
+    font-size:20px;
+    color:white;
+    margin-down:400px;
+}
+.last{
+    height:50px;
+    width:100%;
+    background-color:antiquewhite;
+}
+.designed{
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    margin-top:12px;
+}
+.review_margin{
+    margin-left:-40px;
+}
+
+

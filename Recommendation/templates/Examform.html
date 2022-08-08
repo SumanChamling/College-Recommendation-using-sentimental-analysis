@@ -1,0 +1,94 @@
+{% extends 'Dashboard.html' %}
+{% block content %}
+<div class="col-md-9 himal">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-4 examform bg-primary  text-light">
+                <h3 class="alert alert-light border rounded p-2">College Pre Order Form</h3>
+                  <form action="/signupages" method="POST">
+                    {% if error %}
+                    <div class="alert alert-success" role="alert">
+                        {{error}}
+                    </div>
+                    {% endif %}
+                    {% csrf_token %}
+                    <div class="form-group mt-4">
+                        <label for="">Name</label>
+                        <input required type="text" name="name" id="" value="{{values.name}}" class="form-control form-control-sm"
+                               placeholder="Enter your name">
+                    </div>
+                     <div class="form-group">
+                        <label for="">Email</label>
+                        <input required type="email" name="email" id="" value="{{values.email}}" class="form-control form control-sm"
+                               placeholder="Enter your Email address">
+                         </div>
+                     <div class="form-group">
+                          <label for="birthday">Date of Birth:</label>
+                          <input type="date" id="date" name="date" class="form-control form-control-sm">
+
+                     </div>
+                           <div class="form-group">
+                        <label for="">Gender</label><br/>
+                               <input type="radio" id = "male" name="gender" value="MALE">
+                               <label for="male">Male</label><br/>
+                               <input type="radio" id = "female" name="gender" value="FEMALE">
+                               <label for="male">Female</label><br/>
+                               <input type="radio" id = "others" name="gender" value="OTHERS">
+                               <label for="male">Others</label><br/>
+                    </div>
+                     <div class="form-group">
+                        <label for="">Address</label>
+                        <input required type="text" name="address" id="" value="{{values.address}}" class="form-control form-control-sm"
+                               placeholder="Enter your address">
+                    </div>
+                     <div class="form-group">
+                        <label for="">Phone</label>
+                        <input required type="number" name="phone" id="" value="{{values.phone}}" class="form-control form-control-sm"
+                               placeholder="98*******">
+                    </div>
+
+                          <div class="form-group">
+                        <label for="">PromoCode</label>
+                        <input required type="text" name="phone" id="" value="{{values.phone}}" class="form-control form-control-sm"
+                               placeholder="in Capital letters">
+                    </div>
+                      <div class="form-group">
+                        <label for="">College Name</label>
+                          <select name="month" class="form-control form-control-sm" >
+                             <option value="orchid" class="form-control form-control-sm">Orchid International College</option>
+                             <option value="kist" class="form-control form-control-sm">Kist International College</option>
+                             <option value="texas" class="form-control form-control-sm">Texas International College</option>
+                             <option value="bhagawati" class="form-control form-control-sm">Bhagawati International College</option>
+                             <option value="thomson" class="form-control form-control-sm">Thomson International College</option>
+                         </select>
+                       </div>
+
+                        <div class="form-group">
+                        <label for="">College Location</label>
+                          <select name="month" class="form-control form-control-sm" >
+                             <option value="gaushala" class="form-control form-control-sm">Gaushala</option>
+                             <option value="ratopol" class="form-control form-control-sm">Rotopol</option>
+                             <option value="kapan" class="form-control form-control-sm">Kapan</option>
+                             <option value="koteshowr" class="form-control form-control-sm">Koteshowr</option>
+                             <option value="satdobato" class="form-control form-control-sm">Satdobato</option>
+                         </select>
+                       </div>
+
+                    <div class="form-group">
+                        <input class="btn-sm" type="submit" id="" value="Submit">
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+    <div class="instruction">
+        <h1 class="note"><span>Note:</span> Using our promo code make you 10% discount on admisiion, This form valid only for 7 days, you need to visit college with in a 7 days</h1>
+
+    </div>
+</div>
+{% endblock %}

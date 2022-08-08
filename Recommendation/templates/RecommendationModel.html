@@ -1,0 +1,40 @@
+{% extends 'Dashboard.html' %}
+{% block content %}
+<div class="col-md-9 mt-5">
+
+
+    <div class="container ml-5 mt-5">
+        <div class="row">
+            <div class="col-md-7 ">
+                   <ul class="list-group">
+            <li class="list-group-item active text-center font-weight-bold">Alumnus Review</li>
+        {% for review in Reviews %}
+            <li class="list-group-item text-center">{{ review.collegeReview }}</li>
+
+        {% endfor %}
+        </ul>
+            </div>
+             <div class="col-md-3 review_margin">
+                <ul class="list-group">
+            <li class="list-group-item active text-center font-weight-bold">College Name</li>
+        {% for review in Reviews %}
+            <li class="list-group-item text-center">{{ review.collegeName }}</li>
+        {% endfor %}
+        </ul>
+
+            </div>
+            <div class="col-md-2 review_margin">
+                <ul class="list-group">
+            <li class="list-group-item active text-center font-weight-bold">Output</li>
+        {% for review in Reviews %}
+            <li class="list-group-item text-center">{{ review.Review_result }}</li>
+        {% endfor %}
+        </ul>
+
+            </div>
+        </div>
+    </div>
+        <div class="row">
+        </div>
+</div>
+{% endblock %}

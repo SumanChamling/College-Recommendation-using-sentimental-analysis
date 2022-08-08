@@ -1,0 +1,80 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+  <div class="container-fluid mt-2 cove">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="logo">
+           <img src="../../static/images/jjj.gif" height="80px" width="80px">
+        </div>
+      </div>
+      <div class="col-md-8 mt-3">
+        <h1 class="topic">COLLEGE RECOMMENDATION SYSTEM</h1>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-4">
+    <div class="row">
+      {% block content %}
+  {% endblock %}
+        <div class="col-md-3 ">
+
+            <!-- As a link -->
+            <div class="mt-5 ladder">
+              <nav class="navbar navbar-light pl-2">
+                <div class="container">
+                  <a class="navbar-brand font-weight-bold pl-5 text-primary"  href="/dashboardhome">HOME</a>
+                </div>
+              </nav>
+              <nav class="navbar navbar-light ">
+                <div class="container">
+                  <a class="navbar-brand font-weight-bold text-center text-primary"  href="/checksorc">RECOMMENDATION</a>
+                </div>
+              </nav>
+              <nav class="navbar navbar-light">
+                <div class="container ml-4">
+                  <a class="navbar-brand font-weight-bold text-primary"  href="/examform">EXAM FORM</a>
+                </div>
+              </nav>
+              <nav class="navbar navbar-light pl-2">
+                <div class="container">
+                  <a class="navbar-brand font-weight-bold pl-5 text-primary"  href="/blogs">BLOGS</a>
+                </div>
+              </nav>
+              <nav class="navbar navbar-light pl-2">
+                <div class="container">
+                  <a class="navbar-brand font-weight-bold pl-5 text-primary"  href="/review">REVIEW</a>
+                </div>
+              </nav>
+              <nav class="navbar navbar-light pl-1 ">
+                <div class="container ">
+                  <a class="navbar-brand font-weight-bold pl-5 text-primary"  href="logout">LOGOUT</a>
+                </div>
+              </nav>
+              <div class="DisplayName mt-4">
+                <img src="../static/images/w.png" height="30px", width="30px" style="    margin-left: 10px;    position: absolute;top: 449px;"> <br>
+                <b class="welcome pl-5">{{ request.session.name }}</b></br>
+                <b class="welcome">"WELCOME TO YOU"</b>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+      <script src="{% static 'css/js/jquery.js' %}" ></script>
+    <script src="{% static 'css/js/bootstrap.min.js' %}" ></script>
+
+  </body>
+</html>

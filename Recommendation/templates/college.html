@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for college in addcollege %}
+<div class="card text-center mt-4 covers">
+  <div class="card-body">
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-md-4">
+          <b>Faculty</b>
+          <p>{{college.facultyName}}</p>
+            <hr>
+             <h5 style="font-weight:bold">Overall Rating</h5>
+            <div class="rating">
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <h5 class="card-title">{{college.name}}</h5>
+          <p class="card-text">{{college.description}}</p>
+          <a href="{{college.website}}" class="btn btn-primary">Find more</a>
+        </div>
+        <div class="col-md-4">
+            <div class="schoolimg">
+                <img src="{{college.image.url}}" height="160px" width="260px" />
+            </div>
+          <br /><br />
+          {{college.website}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="slider">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 my-5">
+                    <div class="owl-carousel owl-theme">
+                        {% for review in reviews %}
+                        <div class="container-fluid">
+                            <div class="content">
+                                <div class="card mt-4">
+                                    <div class="card-content">
+                                        <div class="image">
+                                            <img src="../static/images/a.png" alt=""/>
+                                            <h4 style="font-size:17px;">{{review.registered_email}}</h4>
+                                            <h4>{{review.address}}</h4>
+                                            <h4>{{review.collegeReview}}</h4>
+                                            <i class="fa fa-star {% if review.rating > 5 %} checked {% endif %}" style="float:right;"></i>
+                                            <i class="fa fa-star {% if review.rating > 4 %} checked {% endif %}" style="float:right;"></i>
+                                            <i class="fa fa-star {% if review.rating > 3 %} checked {% endif %}" style="float:right;"></i>
+                                            <i class="fa fa-star {% if review.rating > 2 %} checked {% endif %}" style="float:right;"></i>
+                                            <i class="fa fa-star {% if review.rating > 1 %} checked {% endif %}" style="float:right;"></i>
+                                            <i class="fa fa-star {% if review.rating > 0 %} checked {% endif %}" style="float:right;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endfor %}
+{% block scripts %}
+<script>
+
+</script>
+{% endblock scripts%}
+
+{% endblock %}
+

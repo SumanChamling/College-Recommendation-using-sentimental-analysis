@@ -1,0 +1,51 @@
+{% extends 'Dashboard.html' %}
+{% block content %}
+<div class="col-md-9">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-4 bg-primary mt-5 text-light">
+        <div class="form mt-5 border-rounded">
+          <h3 class="alert alert-light border rounded p-2">Old School Details</h3>
+          <form action="/oldschool" method="POST">
+            {% if error %}
+            <div class="alert alert-success" role="alert">{{error}}</div>
+            {% endif %}
+              {% csrf_token %}
+            <div class="form-group mt-4">
+              <div class="form-group">
+                <label for="">Old Schoolname</label>
+                <input
+                  required
+                  type="text"
+                  name="sname"
+                  id=""
+                  value="{{values.schoolname}}"
+                  class="form-control form control-sm"
+                  placeholder="Enter name of old school"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">School location</label>
+                <input
+                  required
+                  type="text"
+                  name="slocation"
+                  id=""
+                  value = "{{values.schoollocation}}"
+                  class="form-control form-control-sm"
+                  placeholder="Enter school location"
+                />
+              </div>
+              <div class="form-group">
+                <input class="btn-lg ml-5" type="submit" id="" value="GoTo" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
